@@ -1,22 +1,47 @@
+/*!
+ * jquery.slide v1.0.0
+ * A simple jQuery slider.
+ * https://github.com/cobish/jquery.slide
+
+ * Copyright (c) 2016, cobish
+ * Released under the MIT license.
+ */
 (function($, window) {
   'use strict';
 
   var slide = {
     // default options
     defaults: {
-      isAutoSlide: true,                // 自动轮播
-      isHoverStop: true,                // 鼠标移上是否停止轮播
-      isBlurStop: true,                 // Window失去焦点是否停止轮播
-      isShowDots: true,                 // 是否显示状态点
-      isShowArrow: true,                // 是否显示左右箭头
-      slideSpeed: 10000,                // 轮播速度 (ms)
-      switchSpeed: 500,                 // 图片切换速度 (ms)
-      dotsClass: 'dots',                // 状态点样式
-      dotActiveClass: 'active',         // 状态点激活样式
-      dotsEvent: 'click',               // 状态点事件，click或mouseover
-      arrowClass: 'arrow',              // 箭头样式
-      arrowLeftClass: 'arrow-left',     // 左箭头样式
-      arrowRightClass: 'arrow-right'    // 右箭头样式
+      // auto play
+  isAutoSlide: true, 
+
+  // auto pause on hover
+  isHoverStop: true,
+
+  // auto pause when the current windows loses focus
+  isBlurStop: true,
+
+  // shows pagination dots
+  isShowDots: true,
+
+  // shows navigation arrows
+  isShowArrow: true, 
+
+  // animation speed
+  slideSpeed: 1000, 
+
+  // transition delay
+  switchSpeed: 500,
+
+  // custom CSS classes
+  dotsClass: 'dots',    
+  dotActiveClass: 'active', 
+  arrowClass: 'arrow', 
+  arrowLeftClass: 'arrow-left', 
+  arrowRightClass: 'arrow-right',
+
+  // click or mouseover
+  dotsEvent: 'click'
     },
 
     // curr options
@@ -101,7 +126,10 @@
         $block.css({
           'background': 'url(' + bg + ')',
           'opacity': '0',
-          'z-index': '0'
+          'z-index': '0',
+		  'background-repeat': 'no-repeat',
+		  'background-size': 'cover',
+		  'background-position': '50% 50%',
         });
         $block.attr('data-bg', '');
       }
