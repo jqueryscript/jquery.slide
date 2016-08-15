@@ -2,6 +2,10 @@
 
 > A simple jQuery slider. Forked from [https://github.com/cobish/jquery.slide]
 
+## What's new
+1. Responsive background images.
+2. Auto adjusts the slider depending on the screen size.
+
 ## Installing with NPM
 
 ``` bash
