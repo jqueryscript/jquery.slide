@@ -1,7 +1,8 @@
+
 .slide {
   position: relative;
   margin: 100px auto;
-  width: 940px;
+  width: 80%;
   height: 350px;
   background: #ccc;
 }
@@ -29,19 +30,19 @@
 .slide .dots li {
   display: inline-block;
   margin: 0 10px;
-	width: 10px;
-	height: 10px;
-	border: 2px solid #fff;
-	border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  border: 2px solid #fff;
+  border-radius: 50%;
   opacity: 0.4;
-	cursor: pointer;
-	transition: background .5s, opacity .5s;
+  cursor: pointer;
+  transition: background .5s, opacity .5s;
   list-style: none;
 }
 
 .slide .dots li.active {
   background: #fff;
-	opacity: 1;
+  opacity: 1;
 }
 
 .slide .arrow {
@@ -52,8 +53,7 @@
   height: 100%;
 }
 
-.slide .arrow .arrow-left,
-.slide .arrow .arrow-right {
+.slide .arrow .arrow-left, .slide .arrow .arrow-right {
   position: absolute;
   z-index: 2;
   top: 50%;
@@ -63,13 +63,10 @@
   height: 50px;
   cursor: pointer;
   opacity: 0.5;
-	transition: background .5s, opacity .5s;
+  transition: background .5s, opacity .5s;
 }
 
-.slide .arrow  .arrow-left:hover,
-.slide .arrow  .arrow-right:hover {
-  opacity: 1;
-}
+.slide .arrow .arrow-left:hover, .slide .arrow .arrow-right:hover { opacity: 1; }
 
 .slide .arrow .arrow-left {
   left: 20px;
